@@ -1,0 +1,70 @@
+Write “****************** Nabir Migadde Real Estate Commission Calculator ****************”
+Declare computeAns as Character
+Declare computeAns2 as Character
+Declare agentID as String
+Declare modelType as Character
+Declare modelType2 as Character
+Declare housePrice as Float
+Declare housePrice2 as Float
+Declare com as Float
+Declare com2 as Float
+Declare numBasic as Integer 
+Declare numStand as Integer
+Declare numLux as Integer
+Set numBasic = 0
+Set numStand = 0
+Set numLux = 0
+Write “Do you have a commission to compute? (1=yes, 0=no)     ”
+Input computeAns
+If (computeAns = 1) Then
+Write “Please enter the Real Estate Agent ID:     ”
+Input agentID
+Write “Please enter model of house sold ?
+(B = Basic, S=Standard, L= Luxury):     ” 
+Input modelType
+Write “Please enter the selling price of house:     ”
+Input housePrice
+If (modelType = B) Then
+		Set com = housePrice * 0.10
+		Set numBasic = numBasic + 1
+End If (modelType = S) Then
+		Set com = housePrice * 0.15
+		Set numStand = numStand + 1
+End If (modelType = L) Then
+		Set com = housePrice * 0.20
+		Set numLux = numLux + 1
+Write “The commission for this sale for Real Estate Sales person ID ” + agentID + “ is: ” + com
+Write “Do you have another commission to compute? (1=yes, 0 = no)?     ”
+Input computeAns2
+If (computeAns2= 1) Then
+Write “Please enter the Real Estate Agent ID:     ”
+Input agentID
+Write “Please enter model of house sold ?
+(B = Basic, S=Standard, L= Luxury):     ”
+Input modelType2
+Write “Please enter the selling price of house:     ”
+Input housePrice2
+If (modelType = B) Then
+		Set com2 = housePrice2 * 0.10
+		Set numBasic = numBasic + 1
+End If (modelType = S) Then
+		Set com2 = housePrice2 * 0.15
+		Set numStand = numStand + 1
+End If (modelType = L) Then
+		Set com2 = housePrice2 * 0.20
+		Set numLux = numLux + 1
+End If (computeAns2 = 0) Then
+End
+End If (computeAns = 0) Then
+End
+
+Write “********************** End of Run Report**********************”
+Write “Total number of Standard houses commissions computed = ” + numStand
+Write “Total number of Luxury houses commissions computed = ” + numLux
+Write “Total number of Basic Houses commissions computed = ” + numBasic
+Write “Total number of all commissions computed = ” + (numStand + numLux + numBasic)
+Write “Total amount of Standard House commissions computed = ” + 
+Write “Total amount of Basic House commissions computed = ” + ???
+Write “Total amount of Luxury House commissions computed = ” + ???
+Write “Total amount of all commissions computed = ” + (com + com2)
+Write “********************** End of Run Report **********************” 
